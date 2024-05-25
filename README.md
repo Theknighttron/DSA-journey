@@ -56,4 +56,26 @@ heterogeneous array > refers to array that support mutiple data type within a si
 -- Insert values at any point into the structure
 -- Delete values in the structure
 
+LinkedList
+is a linear data structure where each element in the list is contained in a separate object called Node
 
+Head Node - this  Referes to the first node element / begging of the list
+Tail Node - this Referes to the last node element / end of the list
+
+Node - is a (Self Referencial Object) meaning A link to another node
+
+
+LinkedList Forms
+1. Singly Linked List
+Each element stores a reference to the next node is the list
+
+2. Doubly Linked List
+Each element stores a reference to the both the node before and after
+
+
+List traversal - Moving from one node to the next node
+
+Inserting data to the list
+1. Prepend - inserting data to the head
+2. Append - inserting data to the tail
+3. True insert - is where you can insert data at any point in the list
