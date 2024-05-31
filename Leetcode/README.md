@@ -66,4 +66,43 @@ Time Complexity: O(n) <br>
 Space Complexity: O(1)
 
 
+## Two Sum II - Input Array Is Sorted
+
+### Problem Description:
+> Given a 1-indexed array of integers numbers that is already sorted in non-decreasing order,
+> find two numbers such that they add up to a specific target number.
+> Let these two numbers be numbers[index1] and numbers[index2] where 1 <= index1 < index2 <= numbers.length.
+> Return the indices of the two numbers, index1 and index2, added by one as an integer array [index1, index2] of length 2.
+> The tests are generated such that there is exactly one solution. You may not use the same element twice.
+> Your solution must use only constant extra space.
+
+
+##### The Intuition
+1. Pointer initializiation, one to point to the start and other to the end of the given array.
+2. Loop through the array as long as the leftPointer is less than the rightPointer
+3. Find the sum of the left and right  element at current indexes position
+4. Condition to adjust the pointer based on the sum and the target
+5. Return the index of element that sum's up to the target plus one
+
+
+
+```
+def TwoSum(numbers, target):
+    leftPointer = 0
+    rightPointer = len(numbers) - 1
+
+    while leftPointer < rightPointer:
+        sum = numbers[leftPointer] + numbers[rightPointer]
+
+        if sum > target:
+            rightPointer -= 1
+        elif sum < target:
+            leftPointer += 1
+        else:
+            return [leftPointer + 1, rightPointer + 1]
+
+
+arr = [2, 7, 11, 15]
+print(TwoSum(arr, 9))
+```
 
