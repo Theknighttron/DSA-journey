@@ -40,7 +40,7 @@ class LinkedList:
         return count
 
     """
-    Inserting
+    Adding new node
     """
     def add(self, data):
         """
@@ -53,8 +53,8 @@ class LinkedList:
 
 
     """
-    Searching
-     """
+    Searching for a value
+    """
     def search(self, value):
         """
         Search for the first node containing data that matches the value
@@ -70,6 +70,35 @@ class LinkedList:
             else:
                 current = current.next_node
         return None
+
+
+    def insert(self, data, index):
+        """
+        Inserts a new Node containing data at index position
+        Insertion takes O(1) but finding the node at the
+        Insertion point takes O(n) time.
+
+        Takes overall O(n) time
+        """
+        if index == 0:
+            self.add(data)
+
+        if index > 0:
+            new = Node(data)
+
+            position = index
+            current = self.head
+
+
+            while position > 1:
+                current = node.next_node
+                position = position - 1
+
+            prev_node = current
+            next_node = current.next_node
+
+            prev_node.next_node = new
+            new.next_node = next_node
 
 
     def __repr__(self):
