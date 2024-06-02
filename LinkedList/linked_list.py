@@ -39,6 +39,9 @@ class LinkedList:
 
         return count
 
+    """
+    Inserting
+    """
     def add(self, data):
         """
         Adds a new Node containing data at the head of the list
@@ -47,6 +50,26 @@ class LinkedList:
         new_node = Node(data)
         new_node.next_node = self.head
         self.head = new_node
+
+
+    """
+    Searching
+     """
+    def search(self, value):
+        """
+        Search for the first node containing data that matches the value
+        Return node or None if not found
+
+        Takes O(n)
+        """
+        current = self.head
+
+        while current != None:
+            if current.data == value:
+                return current
+            else:
+                current = current.next_node
+        return None
 
 
     def __repr__(self):
@@ -79,5 +102,7 @@ l.add(3)
 l.add(5)
 l.add(6)
 l.add(10)
+find = l.search(6)
 
 print(l)
+print(find)
