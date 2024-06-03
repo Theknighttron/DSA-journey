@@ -1,3 +1,5 @@
+import random
+
 class Stack:
     def __init__(self, Capacity = 1):
         self.top = -1
@@ -14,7 +16,7 @@ class Stack:
 
 
     def pop(self):
-        if self.top = -1:
+        if self.top == -1:
             print("Stack underflow")
             return
         temp = self.Arr[self.top]
@@ -28,4 +30,23 @@ class Stack:
                 self.A = newArray
             return temp
 
+    def peek(self):
+        if self.top == -1:
+            print("Stack underflow")
+            return
+        return self.Arr[self.top]
 
+
+    def isEmpty(self):
+        return self.top == -1
+
+    def isFull(self):
+        return self.Capacity == self.top + 1
+
+stack = Stack()
+for i in range(10):
+    stack.push(random.randint(1,21))
+for i in range (12):
+    temp = stack.pop()
+    if temp is not None:
+        print(temp)
