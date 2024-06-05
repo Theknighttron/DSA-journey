@@ -66,7 +66,7 @@ Time Complexity: O(n) <br>
 Space Complexity: O(1)
 
 
-## Two Sum II - Input Array Is Sorted
+## 3. Two Sum II - Input Array Is Sorted
 
 ### Problem Description:
 > Given a 1-indexed array of integers numbers that is already sorted in non-decreasing order,
@@ -106,3 +106,34 @@ arr = [2, 7, 11, 15]
 print(TwoSum(arr, 9))
 ```
 
+
+
+## 4. Contains Duplicate
+
+
+### Problem Description:
+
+> Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct
+
+##### The Intuition
+
+
+
+```
+def containsDuplicate(nums):
+    seen = set()
+
+    for num in nums:
+        if num in seen:
+            return True
+        seen.add(num)
+    return False
+
+numbers = [1, 2, 3, 1]
+print(containsDuplicate(numbers))
+```
+
+Time Complexity: O(n) <br>
+Space Complexity: O(n)
+
+## 5.
