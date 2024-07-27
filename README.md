@@ -32,6 +32,13 @@ Space complexity of recursive binary search is O(log n)/logarithmic since every 
 We create a new sublist from the original list.
 
 
+## Dynamic Connectivity Problem
+Some of the data structure for solving this problem are:
+
+### 1. Quick Find
+
+
+
 
 
 ## DATA STRUCTURE

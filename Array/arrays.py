@@ -22,6 +22,7 @@ for n in new_list:
 new_list[0] = 9 # True inserting
 # Time complexity is O(n) since we have to shift each element from the current index to the last index
 
+
 new_list.append(6) # Appending the element to the end of the list
 # Time complexity is O(1) since we are adding the element to the end of the list
 
